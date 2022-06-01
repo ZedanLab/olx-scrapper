@@ -16,7 +16,7 @@ async function scrape() {
   const page = await browser.newPage();
 
   for (let index = 1; index < 500; index++) {
-    await page.goto(`https://www.olx.com.eg/properties?page=${index}`);
+    await page.goto(`https://www.olx.com.eg/vehicles/cars-for-sale?page=${index}`);
     //   var element = await page.waitForSelector("article > div > a");
     await page.waitForFunction(
       () => document.querySelectorAll("article > div > a").length
